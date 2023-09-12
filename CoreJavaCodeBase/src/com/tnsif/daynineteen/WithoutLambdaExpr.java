@@ -9,7 +9,7 @@ public class WithoutLambdaExpr {
 	    	//without lambda, 
 	    	//Message implementation using anonymous class  
 	     
-	        Statement s=new Statement() {
+	        IStatement s=new IStatement() {
 	        	public String show()
 	        	{
 	        		return "Welcome to Lambda Expression";

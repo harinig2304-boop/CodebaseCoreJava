@@ -40,7 +40,7 @@ public class UsingFunctionalInterfaces {
 		System.out.println(supplier.get());
 
 		//Constructor reference
-		Supplier<Display> displaySupplier =  Display::new;
+		Supplier<Display> displaySupplier =  Display::new; //constructor reference 
 		System.out.println(displaySupplier.get().getName());
 
 		// Positive/Negative number test

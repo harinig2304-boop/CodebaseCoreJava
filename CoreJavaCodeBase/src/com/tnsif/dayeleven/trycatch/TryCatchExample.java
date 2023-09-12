@@ -2,15 +2,19 @@
 package com.tnsif.dayeleven.trycatch;
 
 public class TryCatchExample {
-    static void performDivision(int x, int y) {
-        System.out.println("I am in method");
-        int z;
-        try {
-            System.out.println("I am in try block");
-            z = x / y;
-            System.out.println("Result of z: " + z); // This message will be printed if no exception occurs
-        } catch (ArithmeticException e) {
-            System.out.println("I am in catch block: " + e.getMessage());
-        }
-    }
+	static int performDivision(int x, int y) {
+		System.out.println("I am in method");
+		int z = 0;
+		try {
+			System.out.println("I am in try block");
+			z = x / y;
+		} catch (ArithmeticException e) {
+			System.out.println("I am in catch block: " + e.getMessage());
+		}
+		return z;
+	}
+	static float performDivision(float a, float b)
+	{
+		return a/b;
+	}
 }

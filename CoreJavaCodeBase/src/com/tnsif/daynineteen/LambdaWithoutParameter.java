@@ -5,7 +5,7 @@ public class LambdaWithoutParameter {
 
 	public static void main(String[] args) {
 		
-		Statement s = () -> {return "Hello World!!";};
+		IStatement s = () -> {return "Hello World!!";};
 		System.out.println(s.show());
 
 
