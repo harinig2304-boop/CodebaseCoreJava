@@ -1,4 +1,4 @@
-//Program to demonstrate interthread communication
+//Program to demonstrate inter-thread communication
 package com.tnsif.dayfourteen.interthreadcommunication;
 
 public class InterThreadCommunicationDemo {

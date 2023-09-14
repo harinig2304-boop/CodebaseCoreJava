@@ -2,21 +2,21 @@
 package com.tnsif.daythirteen;
 
 public class UsingRunnable implements Runnable {
-	Thread t;
-	int h, l;
+	Thread thread;
+	int high, low;
 	String msg;
 
-	public UsingRunnable(int l, int h,String msg) {
-		this.h = h;
-		this.l = l;
+	public UsingRunnable(int low, int high, String msg) {
+		this.high = high;
+		this.low = low;
 		this.msg = msg;
-		t = new Thread(this, "Child Thread");
-		t.start();
+		thread = new Thread(this, "Child Thread");
+		thread.start();
 	}
 
 	@Override
 	public void run() {
-		for (int i = l;i<=h;i++) {
+		for (int i = low; i <= high; i++) {
 			try {
 				Thread.sleep(500);
 			} catch (InterruptedException e) {
@@ -26,20 +26,3 @@ public class UsingRunnable implements Runnable {
 		}
 	}
 }
-
-/*public class RunnableLambdaTest {
-public static void main(String[] args) {
-   Runnable r1 = new Runnable() {
-      @Override
-      public void run() { // anonymous class
-         System.out.println("Runnable with Anonymous Class");
-      }
-   };
-   Runnable r2 = () -> {   // lambda expression
-      System.out.println("Runnable with Lambda Expression");
-   };
-   new Thread(r1).start();
-   new Thread(r2).start();
-}
-}
-*/

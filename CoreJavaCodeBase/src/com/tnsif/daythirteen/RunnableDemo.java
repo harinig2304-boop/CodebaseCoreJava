@@ -3,7 +3,9 @@ package com.tnsif.daythirteen;
 
 public class RunnableDemo {
 	public static void main(String[] args) {
-		UsingRunnable ur = new UsingRunnable(10, 20, "Hello");
+		//using implementable class
+		UsingRunnable obj = new UsingRunnable(10, 20, "Hello");
+		
 
 		Runnable runnable = new Runnable() {
 			@Override
@@ -11,8 +13,8 @@ public class RunnableDemo {
 				System.out.println("Runnable with Anonymous Class");
 			}
 		};
-		Thread t1 = new Thread(runnable);
-		t1.start();
+		Thread thread = new Thread(runnable);
+		thread.start();
 		
 		// lambda expression
 		runnable = () -> { 

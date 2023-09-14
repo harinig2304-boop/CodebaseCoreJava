@@ -2,18 +2,19 @@
 package com.tnsif.daythirteen;
 
 public class MyChildThread extends Thread {
+	@Override
 	public void run() {
-			System.out.println("In side run() Thread is alive or not? " + this.isAlive());
-			int num = 0;
-			while (num < 4) {
-				num++;
-				System.out.println("num = " + num);
-				try {
-					sleep(500);
-					
-				} catch (InterruptedException exp) {
-					System.err.println("Thread Interrupted ...");
-				}
+		System.out.println("In side run() Thread is alive or not? " + this.isAlive());
+		int no = 0;
+		while (no < 4) {
+			no++;
+			System.out.println("number = " + no);
+			try {
+				sleep(500);
+
+			} catch (InterruptedException exp) {
+				System.err.println("Thread Interrupted ...");
 			}
+		}
 	}
 }

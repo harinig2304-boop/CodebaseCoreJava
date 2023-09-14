@@ -1,4 +1,4 @@
-//Program to demonstrate Thread Synchronization - Account Thread Class
+//Program to demonstrate Thread Synchronization - AccountThread Class
 package com.tnsif.dayfourteen.synchronization;
 
 public class AccountThread extends Thread{
@@ -10,6 +10,7 @@ public class AccountThread extends Thread{
 		this.acc=acc;
 		this.amt=amt;
 		start();
+		
 	}
 	@Override
 	public void run()
@@ -20,6 +21,7 @@ public class AccountThread extends Thread{
 		 * acc.withdraw(amt); 
 		 * }
 		 */		
+		
 		try {
 			acc.withdraw(amt);
 		} catch (InsufficientBalanceException e) {

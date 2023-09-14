@@ -2,8 +2,8 @@
 package com.tnsif.dayfourteen.synchronization;
 
 public interface Bank {
-	static final int MINBAL=5000;
+	int MINBAL=5000; //fields are static and final
 	static final int DAILY_LIMIT=25000;
-	void deposit(int amt) throws DepositLimitExceedsException;
-	void withdraw(int amt)throws InsufficientBalanceException;
+	public abstract void deposit(int amt) throws DepositLimitExceedsException;
+	void withdraw(int amt)throws InsufficientBalanceException; //public and abstract
 }

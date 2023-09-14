@@ -3,13 +3,13 @@ package com.tnsif.daythirteen;
 
 public class ThreadDemo {
 	public static void main(String[] args) {
-		ChildThread t1 = new ChildThread(5, "First");
-		ChildThread t2 = new ChildThread(10, "Second");
+		ChildThread threadOne = new ChildThread(5, "First");
+		ChildThread threadTwo = new ChildThread(10, "Second");
 
-		t1.start();
-		//t1.start(); // throws IllegalStateException
-		// t1.run(); // single threaded application 
-		t2.start();
+		threadOne.start();
+		//threadOne.start(); // throws IllegalStateException
+		// threadOne.run(); // single threaded application 
+		threadTwo.start();
 
 		System.out.println("-----------------------End of Main--------------------------");
 	}
