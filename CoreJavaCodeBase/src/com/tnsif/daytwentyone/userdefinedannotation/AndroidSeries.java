@@ -2,7 +2,7 @@
 package com.tnsif.daytwentyone.userdefinedannotation;
 
 @SmartTV(os = "android", height = 40, width = 50)
-@SmartPhone(os = "android", version = 12)
+@SmartPhone()
 class AndroidSeries {
 	String model;
 	int screenSize;

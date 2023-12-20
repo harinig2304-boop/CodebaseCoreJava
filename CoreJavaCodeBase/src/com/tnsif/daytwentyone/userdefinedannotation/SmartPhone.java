@@ -1,4 +1,4 @@
-//Program to Demonstrate User Define Annotation - SmartTV
+//Program to Demonstrate User Define Annotation - SmartPhone
 package com.tnsif.daytwentyone.userdefinedannotation;
 
 import java.lang.annotation.Retention;

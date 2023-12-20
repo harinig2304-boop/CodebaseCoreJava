@@ -12,7 +12,7 @@ public class Student {
 		this.branch = branch;
 	}
 
-	@Override
+//	@Override
 	public String toString() {
 		return "Student information [id=" + id + ", name=" + name + ", branch=" + branch + "]";
 	}
