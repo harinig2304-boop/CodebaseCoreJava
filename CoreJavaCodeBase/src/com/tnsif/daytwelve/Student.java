@@ -29,15 +29,6 @@ public class Student {
 		return marks;
 	}
 
-	public void setMarks(int[] marks) throws InvalidMarksException {
-		for(int ele:marks)
-		{
-			if (ele<0 || ele>100)
-				throw new InvalidMarksException("Marks should be between 0 to 100");
-		}
-		this.marks = marks;
-	}
-
 	public int getNoOfSubjects() {
 		return noOfSubjects;
 	}
@@ -46,15 +37,15 @@ public class Student {
 		this.noOfSubjects = noOfSubjects;
 	}
 
-	public void calculatePercentage()
-	{
-		int total=0;
-		for(int value:marks)
-			total+=value;
-		per=total/noOfSubjects;
-		
-	}
 	
+	public void setMarks(int[] marks) {
+		this.marks = marks;
+	}
+
+	public void setPer(float per) {
+		this.per = per;
+	}
+
 	public float getPer()
 	{
 		return this.per;

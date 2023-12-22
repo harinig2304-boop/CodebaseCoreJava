@@ -2,8 +2,6 @@
 
 package com.tnsif.dayeleven.v1;
 
-
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 

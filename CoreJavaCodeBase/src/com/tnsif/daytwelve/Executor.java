@@ -1,46 +1,54 @@
+//Program to implement student module
 package com.tnsif.daytwelve;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Executor {
 
 	public static void main(String[] args) {
-		try
-		{
+		try {
+			@SuppressWarnings("resource")
+			Scanner sc = new Scanner(System.in);
+			//Accept student details
+			Student sOne = new Student();
+			System.out.println("Enter the roll no: ");
+			int rollNo = sc.nextInt();
+			sOne.setRollNo(rollNo);
+			System.out.println("Enter your name: ");
+			String name = sc.nextLine();
+			sc.nextLine();
+			sOne.setName(name);
+			System.out.println("Enter the no.of subjects ");
+			int sub = sc.nextInt();
+			sOne.setNoOfSubjects(sub);
+			System.out.println("enter the marks for " + sub);
+			int[] intArr = new int[sub];
+			for (int i = 0; i < sub; i++) {
 
-		Batch b01=new Batch();
-		b01.setBatchCode("TC050401");
-		b01.setBatchSize(10);
-		
-		Student studentArray[]=new Student[2];
-		studentArray[0]=new Student();
-		studentArray[0].setRollNo(1);
-	
-		studentArray[0].setMarks(new int[] {45,67,89});
-		studentArray[0].setNoOfSubjects(studentArray[0].getMarks().length);
-		studentArray[0].setName("Nihal");
-		studentArray[0].calculatePercentage();
-		
-		studentArray[1]=new Student();
-		studentArray[1].setRollNo(2);
-		studentArray[1].setMarks(new int[] {50,60,80});
-		studentArray[1].setNoOfSubjects(studentArray[1].getMarks().length);
-		studentArray[1].setName("Vishal");
-		studentArray[1].calculatePercentage();
-		
-		b01.setStudents(studentArray);
-		System.out.println(b01);
-		
-		System.out.println(b01.getTopper());
-		}catch(InvalidMarksException ime)
-		{
-			System.out.println("Error..."+ime.getMessage());
+				intArr[i] = sc.nextInt();
+			}
+			//validate marks
+			if (Service.validateMarks(intArr)) {
+
+				sOne.setMarks(intArr);
+				sOne.setPer(Service.calculatePercentage(intArr));
+
+			}
+			//display student details
+			System.out.println("Student details: " + sOne);
+
+		} catch (InvalidMarksException e) {
+			// e.printStackTrace();
+			System.err.println(e.getMessage());
 		}
-		catch(NullPointerException | ArithmeticException e)
-		{
-			System.out.println(e.getMessage());
+
+		catch (NullPointerException | ArithmeticException |InputMismatchException e) {
+
+			// e.printStackTrace();
+			System.err.println(e.getMessage());
 		}
-		
+
 	}
 
 }
