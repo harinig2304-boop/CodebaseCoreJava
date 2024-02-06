@@ -12,6 +12,7 @@ public class Executor {
 			Scanner sc = new Scanner(System.in);
 			//Accept student details
 			Student sOne = new Student();
+			System.out.println();
 			System.out.println("Enter the roll no: ");
 			int rollNo = sc.nextInt();
 			sOne.setRollNo(rollNo);
