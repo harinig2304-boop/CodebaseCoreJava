@@ -29,8 +29,8 @@ public class LambdaExpWithParameter {
 		
 		IsOdd o = (a) -> a % 2 != 0 ? true : false;
 
-		System.out.println("Is 7 Odd Number? :" +o.CheckOdd(7));
-		System.out.println("Is 8 Odd Number? :" +o.CheckOdd(8));
+		System.out.println("Is 7 Odd Number? :" +o.checkOdd(7));
+		System.out.println("Is 8 Odd Number? :" +o.checkOdd(8));
 	}
 
 }

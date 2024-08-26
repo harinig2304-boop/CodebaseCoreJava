@@ -13,7 +13,7 @@ public class OverloadingDemo {
 		Point p1 = new Point(14.5f); //single parameter constructor
 		System.out.println(p1);
 
-		Point p2 = new Point(12.5f, 20.50f); //two paramters constructor
+		Point p2 = new Point(12.5f, 20.50f); //two parameters constructor
 		System.out.println(p2);
 
 		System.out.println("------------------------ Method Overloading -----------------------");

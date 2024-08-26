@@ -2,7 +2,6 @@
 package com.tnsif.daytwelve;
 
 import java.io.IOException;
-
 public class CheckedExceptionDemo {
 
 	public static void main(String[] args) {

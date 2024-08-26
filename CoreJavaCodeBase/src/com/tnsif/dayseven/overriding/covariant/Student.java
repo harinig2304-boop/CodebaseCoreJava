@@ -46,16 +46,17 @@ class Student implements Cloneable {
 
 	// Override the clone method
 
-	@Override
-	public Object clone() throws CloneNotSupportedException {
-		return super.clone();
-	}
+	/*
+	 * @Override public Object clone() throws CloneNotSupportedException { return
+	 * super.clone(); }
+	 */
 
 	// Override the clone method - Covariant overriding
 
-	/*
-	 * @Override public Student clone() throws CloneNotSupportedException { return
-	 * (Student) super.clone(); }
-	 */
+	
+	  @Override 
+		public Student clone() throws CloneNotSupportedException	  { return
+	  (Student) super.clone(); }
+	 
 
 }

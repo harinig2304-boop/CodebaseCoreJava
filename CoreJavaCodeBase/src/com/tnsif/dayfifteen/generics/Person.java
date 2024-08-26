@@ -2,6 +2,7 @@
 package com.tnsif.dayfifteen.generics;
 
 public class Person implements Comparable<Person>{
+
 	private String name;
 	private String city;
 	public String getName() {
@@ -29,7 +30,7 @@ public Person() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	@Override
+	//@Override
 	public int compareTo(Person o) {
 		return this.city.compareTo(o.city);
 	}	

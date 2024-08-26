@@ -21,7 +21,7 @@ public class UpperBoundedWildCardDemo {
 		
 		/*
 		 * ArrayList<String> strList=new ArrayList<String>(); strList.add("Arun");
-		 * strList.add("Ajay"); strList.add("Ragul"); //passing String List
+		 * strList.add("Ajay"); strList.add("Rahul"); //passing String List
 		 * System.out.println("sum = " + UpperBoundedWildCard.sumOfList(strList));
 		 */
 		}

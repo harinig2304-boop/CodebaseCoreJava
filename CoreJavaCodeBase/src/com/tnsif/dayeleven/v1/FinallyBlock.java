@@ -1,5 +1,4 @@
 //Program to demonstrate Finally block
-
 package com.tnsif.dayeleven.v1;
 
 import java.util.InputMismatchException;
@@ -12,15 +11,14 @@ public class FinallyBlock {
 		try {
 			System.out.print("Enter the number : ");
 			int number = scanner.nextInt();
-			System.out.println(number % 2 == 0 ? number + " is Even" : number + " is Odd");
+			System.out.println(number+number % 2 == 0 ? " is Even" : " is Odd");
 			return;
 		} catch (InputMismatchException e) {
 			System.err.println("Invalid input...");
 
 		} finally {
 			System.out.println("In Finally....");
-			scanner.close();
+			scanner.close(); 
 		}
-
 	}
 }

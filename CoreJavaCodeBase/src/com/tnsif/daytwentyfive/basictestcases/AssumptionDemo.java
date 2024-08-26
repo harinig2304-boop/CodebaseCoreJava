@@ -13,7 +13,7 @@ public class AssumptionDemo {
 
 	@Test
 	void testOnSecondAssumption() {
-		int age = 12;
+		int age = 5;
 		Assumptions.assumeFalse(age < 18, AssumptionDemo.message());
 		System.out.println("--- This will skip ----");
 	}

@@ -2,7 +2,6 @@
 package com.tnsif.dayseventeen.userdefinedobjects;
 
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 public class HashSetDemo {
@@ -22,8 +21,9 @@ public class HashSetDemo {
 		studentSet.add(s1);
 		s1 = new Student("Neha",81);
 		studentSet.add(s1);
-		s1 = new Student("Neha",81); 
-		studentSet.add(s1); //duplicate element can't insert
+		s1 = new Student("Neha",81);
+		//duplicate element can't insert
+		studentSet.add(s1); 
 
 	}
 

@@ -4,38 +4,13 @@ package com.tnsif.dayfifteen.userdefinedobjects.comparableandcomparator;
 
 import java.util.ArrayList;
 import java.util.Collections;
-
+import java.util.Comparator;
 import java.util.List;
 
-
-class Point
-{
-	float x,y;
-	Point()
-	{}
-	Point(float x, float y)
-	{
-		this.x=x;
-		this.y=y;
-	}
-	@Override
-	public String toString() {
-		return "Point [x=" + x + ", y=" + y + "]";
-	}
-	
-}
 public class ListDemo {
 
 	public static void main(String[] args) {
 		// Adding User Defined objects into ArrayList
-		//List studentList = new ArrayList(); //
-		Point p1=new Point(12,4.5f);
-		Point p2=new Point(10,20);
-		List<Point> pList=new ArrayList<Point>();
-		pList.add(p1);
-		pList.add(p2);
-		Collections.sort(pList);
-		
 		List<Student> studentList = new ArrayList<Student>();
 		Student s1 = new Student(11, "Pooja", 78);
 		studentList.add(s1);
@@ -47,10 +22,10 @@ public class ListDemo {
 		studentList.add(s1);
 		System.out.println("Students Details are as follows\n" + studentList);
 
-		// Using Comparable interface
 		System.out.println("---------------Student Details Before Sorting-------------------");
 		System.out.println(studentList);
 
+		// Using Comparable interface
 		Collections.sort(studentList);
 
 		System.out.println("---------------Student Details After Sorting-------------------");
@@ -76,13 +51,13 @@ public class ListDemo {
 		System.out.println("---------------Person Details Before Sorting-------------------");
 		System.out.println(personList);
 
-		Collections.sort(personList, new SortByName());
-
+		Comparator<Person> pComp=new SortByName();
+		Collections.sort(personList,pComp );
 		System.out.println("---------------Person Details After Sorting by Name -------------------");
 		System.out.println(personList);
 		
-		Collections.sort(personList, new SortByCity());
-
+		pComp=new SortByCity();
+		Collections.sort(personList, pComp);
 		System.out.println("---------------Person Details After Sorting by City -------------------");
 		System.out.println(personList);
 	}

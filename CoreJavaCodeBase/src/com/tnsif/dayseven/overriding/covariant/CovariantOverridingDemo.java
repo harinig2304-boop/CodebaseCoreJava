@@ -11,14 +11,14 @@ public class CovariantOverridingDemo {
 
 			// Student object created using clone method
 			// assuming type casting is required
-			Student student2 = (Student) student1.clone();
-			student2.printData();
+		//	Student student2 = (Student) student1.clone();
+			//student2.printData();
 		
 		 //using covariant return type no need to type cast 
-		 /* Student student2 =student1.clone(); 
-		 * student2.setName("Sachin"); 
-		 * student2.setRollNo(2);
-		 * student2.printData();
-		 */		
+		  Student student2 =student1.clone(); 
+		  student2.setName("Sachin"); 
+		  student2.setRollNo(2);
+		  student2.printData();
+		 		
 		}
 }

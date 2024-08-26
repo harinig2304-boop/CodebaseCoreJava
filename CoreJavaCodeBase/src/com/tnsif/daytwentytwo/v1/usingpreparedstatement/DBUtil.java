@@ -1,33 +1,28 @@
-//Program to define DBUtil class for Database Connectivity
+//Program to established connection with database
 package com.tnsif.daytwentytwo.v1.usingpreparedstatement;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.sql.Statement;
 
 public class DBUtil {
-	private static Connection con;
+	static Connection cn;
+
+	public static Connection getCn() throws ClassNotFoundException, SQLException {
+		// Load JDBC driver
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		System.out.println("Driver Loaded Successfully...");
+
+		// Establish a connection with database (jn07)
+		cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "Admin@123");
 		
-	static
-	{		
-		try {
-			//Step 1. load the JDBC driver
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			System.out.println("Driver loaded successfully...");
-			
-			//Step 2. Establish the connection with database
-			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/dbn08","root","alpana@123");
-			System.out.println("Connection established successfully....");
-		} catch (ClassNotFoundException | SQLException e) {
-			e.printStackTrace();
-		}		
+
+		return cn;
 	}
 	
-	public static Connection getCn()
+	public static void closeConnection() throws SQLException
 	{
-		return con;
+		if (cn!=null)
+			cn.close();
 	}
-	
-	
 }
