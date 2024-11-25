@@ -3,18 +3,13 @@ package com.tnsif.dayeleven.trycatch;
 
 public class TryCatchExample {
 	static int performDivision(int x, int y) {
-		System.out.println("I am in method");
+		System.out.println("I am in performDivision method");
 		int z = 0;
-		try {
-			System.out.println("I am in try block");
-			z = x / y;
-		} catch (ArithmeticException e) {
-			System.out.println("I am in catch block: " + e.getMessage());
-		}
+		z = x / y;
 		return z;
 	}
-	static float performDivision(float a, float b)
-	{
-		return a/b;
+
+	static float performDivision(float a, float b) {
+		return a / b;
 	}
 }

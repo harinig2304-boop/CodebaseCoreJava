@@ -12,10 +12,11 @@ import com.tnsif.daytwentyfive.basictestcases.testsuiteclasses.ClassBTest;
 
 
 @Suite
-@SelectClasses({ClassATest.class,ClassBTest.class})
 //@SelectPackages("com.tns.basictestcases.testsuiteclasses")
-@IncludeTags("production")
+@SelectClasses({ClassATest.class,ClassBTest.class})
 //@IncludeTags({"production","development"})
+@IncludeTags("development")
+
 public class ProductionTest
 {
 }

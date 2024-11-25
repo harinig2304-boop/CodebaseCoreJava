@@ -8,6 +8,6 @@ import org.junit.jupiter.api.TestInfo;
 public class ClassBTest {
 	@Test
 	@Tag("development")
-	void testCaseA(TestInfo testInfo) { //run in all environments
+	void testCaseB(TestInfo testInfo) { //run in all environments
 	}
 }

@@ -1,6 +1,6 @@
 //Program without exception handling
 package com.tnsif.dayeleven.v1;
-public class Demo {
+public class WithoutExceptionHandling {
 
 	public static void main(String[] args) {
 		System.out.println("the program continues....");
